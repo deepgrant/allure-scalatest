@@ -232,7 +232,7 @@ class AllureReporterSpec extends FlatSpec with BeforeAndAfter {
 
   it should "return empty list when called with any location except TopOfMethod or TopOfClass or None" in {
     val reporter = new AllureReporter
-    assert(reporter.getAnnotations(Some(LineInFile(0, ""))).isEmpty)
+    assert(reporter.getAnnotations(Some(LineInFile(0, "", None))).isEmpty)
     assert(reporter.getAnnotations(None).isEmpty)
   }
 
